@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        </head>
-        <body>
+{% extends 'base.html' %}
+{% block content %}
+
             {% for coworkingspace in coworkingspaces %}
-            
             {{coworkingspace.coworking_name}}
             {{coworkingspace.city_name}}
             {{coworkingspace.coworking_description}}
@@ -12,7 +9,6 @@
             {{coworkingspace.opening_hours}}
             {{coworkingspace.website_url}}
             {{coworkingspace.image_url}}
-
             {% endfor %}
-        </body>
-</html>
+            
+{% endblock %}
