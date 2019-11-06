@@ -30,13 +30,11 @@
 
 <div class="album py-5 bg-light">
         <div class="container">
-        
           <div class="row">
-              
+            {% for coworkingspace in coworkingspaces %}
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                  {% for coworkingspace in coworkingspaces %}
-                <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src={{coworkingspace.image_url}} data-holder-rendered="true">
+                <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
                 <div class="card-body">
                 <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
                   <p class="card-text">{{coworkingspace.coworking_description}}</p>
@@ -47,17 +45,10 @@
                   <li class="list-group-item"> <a href="#" class="card-link">{{coworkingspace.website_url}}</a> </li>
                   <li class="list-group-item"><button type="button" class="btn btn-sm btn-outline-secondary">View more</button> </li>
                    </ul>
-                   {% endfor %}
                    </div>
-                   
-               <!--   <div class="d-flex justify-content-between align-items-center">  -->
-              <!--    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View more</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> <!--move this to the view page, to be able to edit info-->
-              <!--      </div>   -->
                   </div>
-                  
                 </div>
+                {% endfor %}
                 </div>
               </div>
             </div>
