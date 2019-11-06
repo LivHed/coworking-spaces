@@ -5,7 +5,7 @@
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">The Coworking Swede</h1>
-        <p class="lead text-muted">Find a Coworking space</p>
+        <p class="lead text-muted">Find a Coworking space in Sweden</p>
         <p>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,7 +42,7 @@
                    <li class="list-group-item">{{coworkingspace.city_name}}</li>
                    <li class="list-group-item">{{coworkingspace.coworking_address}}</li>
                    <li class="list-group-item">{{coworkingspace.opening_hours}}</li>
-                  <li class="list-group-item"> <a href="#" class="card-link">{{coworkingspace.website_url}}</a> </li>
+                  <li class="list-group-item"> <a href="#" target="blank" class="card-link">{{coworkingspace.website_url}}</a> </li>
                   <li class="list-group-item"><button type="button" class="btn btn-sm btn-outline-secondary">View more</button> </li>
                    </ul>
                    </div>
@@ -52,9 +52,32 @@
                 </div>
               </div>
             </div>
-            
+          
+          <div class="container"> 
+           <div class="row">
+             <div class="col-md-12">
+            <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div> 
+  </div>
+  </div> 
+  
  
-      
-      </main>
+</main>
 
 {% endblock %}
