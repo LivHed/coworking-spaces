@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'coworkingSpacesDB'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
 mongo = PyMongo(app)
 
