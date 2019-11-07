@@ -17,6 +17,10 @@ mongo = PyMongo(app)
 def get_coworkingspaces():
     return render_template('home.html', coworkingspaces=mongo.db.coworkingspaces.find())
     
+@app.route('/add_coworkingspace')
+def add_coworkingspace():
+    return render_template('addspace.html')
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
