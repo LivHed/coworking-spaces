@@ -4,7 +4,7 @@
 <div class="container">
     <div class "row">
         <h3 class="text-center">Add a new Coworking space</h3>
-        <form action="" method="POST" class="col-12">
+        <form action="{{ url_for('insert_coworkingspace') }}" method="POST" class="col-12">
             
             <div class="row">
             <div class="form-group col-12">
@@ -55,7 +55,7 @@
             
             <div class="row">
                 <div class="col-12">
-            <button type="button" class="btn btn-m btn-outline-secondary">Add</button>
+            <button type="submit" class="btn btn-m btn-outline-secondary">Add</button>
             </div>
             </div>
             
