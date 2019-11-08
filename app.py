@@ -17,10 +17,18 @@ mongo = PyMongo(app)
 @app.route('/get_coworkingspaces')
 def get_coworkingspaces():
     return render_template('home.html', coworkingspaces=mongo.db.coworkingspaces.find())
+  
     
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
     return render_template('addspace.html', cities=mongo.db.cities.find())
+   
+    
+@app.route('/insert_coworkingspace', methods=['POST'])
+def insert_coworkingspace():
+    coworkingspaces = mongo.db.coworkingspaces
+    coworkingspaces.insert_one(request.form.to_dict())
+    return redirect(url_for('get_coworkingspaces'))
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
