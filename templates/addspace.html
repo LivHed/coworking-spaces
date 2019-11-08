@@ -11,11 +11,9 @@
                 <label for="exampleFormControlSelect1">Cities</label>
                 <select class="form-control" id="city" name="city_name">
       <option value="" disabled selected>Choose a city</option>
-      <option>Stockholm</option>
-      <option>Göteborg</option>
-      <option>Malmö</option>
-      <option>4</option>
-      <option>5</option>
+      {% for city in cities %}
+        <option value="{{city.city_name}}">{{city.city_name}}</option>
+      {% endfor %}
     </select>
             </div>
             </div>
