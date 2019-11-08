@@ -20,7 +20,7 @@ def get_coworkingspaces():
     
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
-    return render_template('addspace.html')
+    return render_template('addspace.html', cities=mongo.db.cities.find())
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
