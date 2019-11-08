@@ -12,7 +12,11 @@
                 <select class="form-control" id="city" name="city_name">
       <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
       {% for city in cities %}
-        <option value="{{city.city_name}}">{{city.city_name}}</option>
+      {% if city.city_name == coworkingspace.city_name %}
+        <option value="{{city.city_name}}" selected >{{city.city_name}}</option>
+        {% else %}
+         <option value="{{city.city_name}}">{{city.city_name}}</option>
+        {% endif %}
       {% endfor %}
     </select>
             </div>
