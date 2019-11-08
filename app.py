@@ -30,6 +30,14 @@ def insert_coworkingspace():
     coworkingspaces.insert_one(request.form.to_dict())
     return redirect(url_for('get_coworkingspaces'))
     
+
+@app.route('/edit_coworkingspace/<coworkingspace_id>')
+def edit_coworkingspace(coworkingspace_id):
+    the_coworkingspace =  mongo.db.coworkingspaces.find_one({"_id": ObjectId(coworkingspace_id)})
+    all_cities =  mongo.db.cities.find()
+    return render_template('editspace.html', coworkingspace=the_coworkingspace,
+                           cities=all_cities)
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
