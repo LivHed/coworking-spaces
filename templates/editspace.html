@@ -46,8 +46,10 @@
             <div class="row">
             <div class="md-form col-4">
                 <label for="openingHours">Opening hours</label>
-            <input placeholder="Opening time" type="text" class="form-control timepicker" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}">
+                
+            <input placeholder="Opening time" type="text" class="form-control timepicker" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}"> 
             <input placeholder="Closing time" type="text" class="form-control timepicker" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}">
+            
             </div>
             </div>
 
@@ -68,5 +70,13 @@
     </div>
 </div>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        //created the local variable opening_hours here with functions to inject the opening hours into the form field intended for this.
+        opening_hours = Time.parse('{{coworkingspace.opening_hours}}');
+        $('#opening_hours').timepicker('picker').set('select', opening_hours, {timeFormat: 'h:mm p - h:mm p'}).trigger('change')
+    });
+</script>
 
 {% endblock %}
