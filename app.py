@@ -37,7 +37,24 @@ def edit_coworkingspace(coworkingspace_id):
     all_cities =  mongo.db.cities.find()
     return render_template('editspace.html', coworkingspace=the_coworkingspace,
                            cities=all_cities)
-                           
+                          
+    
+@app.route('/update_coworkingspace/<coworkingspace_id>', methods=["POST"])
+def update_coworkingspace(coworkingspace_id):
+    coworkingspaces = mongo.db.coworkingspaces
+    coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)},
+    {
+        'city_name':request.form.get('city_name'),
+        'coworking_name':request.form.get('coworking_name'),
+        'coworking_description': request.form.get('coworking_description'),
+        'coworking_address': request.form.get('coworking_address'),
+        'opening_hours':request.form.get('opening_hours'),
+        'website_url':request.form.get('website_url'),
+        'img_url':request.form.get('img_url')
+    })
+    return redirect(url_for('get_coworkingspaces'))
+
+
 @app.route("/delete_coworkingspace/<coworkingspace_id>")
 def delete_coworkingspace(coworkingspace_id):
     mongo.db.coworkingspaces.remove({'_id': ObjectId(coworkingspace_id)})
