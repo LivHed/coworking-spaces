@@ -1,3 +1,15 @@
 body {
   font-family: 'Raleway', sans-serif;
 }
+
+
+
+/* Edit coworkingspace page */
+
+#deleteparagraph {
+    margin-top: 15px;
+}   
+
+#deletebutton {
+    margin: 5px;
+}
