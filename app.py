@@ -37,6 +37,12 @@ def edit_coworkingspace(coworkingspace_id):
     all_cities =  mongo.db.cities.find()
     return render_template('editspace.html', coworkingspace=the_coworkingspace,
                            cities=all_cities)
+                           
+@app.route("/delete_coworkingspace/<coworkingspace_id>")
+def delete_coworkingspace(coworkingspace_id):
+    mongo.db.coworkingspaces.remove({'_id': ObjectId(coworkingspace_id)})
+    return redirect(url_for('get_coworkingspaces'))
+
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
