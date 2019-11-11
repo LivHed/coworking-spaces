@@ -1,8 +1,7 @@
-# Milestone project 3 
-My green travels
+# The Coworking Swede 
 This is my Milestone Project 3: Data Centric Development - Code Institute.
 
-
+This is the page for coworkers that wants to find and go to a coworking space located in swedish cities, to use when it suits them. Check it out here!
 
 ## UX
 After doing research looking at websites with coworking spaces I found that there was not any pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to onlly swedish for myself and my fellow swedish coworkers. My goals with the design was set to:
@@ -10,10 +9,14 @@ After doing research looking at websites with coworking spaces I found that ther
 * To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with button showing clear directions.
 * To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
 
+### Design process
+* The fonts that I chose to use for this website are Railway (sans serif) because..
+
 ### User stories
-* As an environmentally conscious traveller I want to have a look at cities with a sustainable focus before I travel there, to get inspired and remember to keep the focus of those things I find most important in the society.
-* As an environmentally conscious traveller on the road right now I would like to know where to eat and stay for the night while exploring the sustainable city I´m currently in.
-* As a traveller with many different kinds of interests I would like to check this page out, out of pure curiosity, to see what kinds of cities the environmentally conscious travellers would want to visit, and maybe travel there myself to see what these cities are like.
+* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them.
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others.
+* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down.
+* As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.
 
 ### Wireframes
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
@@ -38,26 +41,36 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * In the future I also want to add an option to perform a textSearch in the cities, to narrow down the search to be more related to "green travels" with specific words related to sustainability, like "organic" or "sustainable".
 
 ## Technologies Used
+#### Languages
 * The languages I have used for this project is HTML5, CSS3 and Javascript. I have used the Bootstrap gridsystem with the built in media queries for the content to be responsive.
+
+#### Libraries
 * The libraries included are the Javascript libraries JQuery and Popper.js and Bootstrap JS.
-* Frameworks I have used is Bootstrap 4.3.1. I used the BootstrapCDN on this page
-* Other tools I have used are AWS Cloud9 IDE for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github where the project is stored and deployed.
-* 
-* As part of the design process i chose to use Balsamic to make my wireframes with a simple yet goodlooking result.
-* I used Responsinator to check the responsiveness of the page.
+* [Google Fonts](https://fonts.google.com/) is used to style the fonts of the website.
+
+#### Tools
+* AWS Cloud9 IDE for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github.
+* GitHub to store and share the project remotely. 
+* MongoDB Atlas is the database I have used for this project.
+* Balsamiq to create my wireframes as a part of the design process, with a simple yet goodlooking result.
+* Responsinator was used to check the responsiveness of the page.
 
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
 
+* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. -->
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. -->
+* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down. -->
+* As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.-->
+
+(remove these, look at for insp)
 * As an environmentally conscious traveller I want to have a look at cities with a sustainable focus before I travel there, to get inspired and remember to keep the focus of those things I find most important in the society. --> The information about the list of the sustainable cities and how to find them in the map are easily seen in the introduction right underneath the heading, and are therefore easy to understand how to find by choosing a city in the dropdown menu, and to see on the map with icons and listed in the result list below it. It´s also possible to read more about this list on the company's website that is linked to in the text.
-
 * As an environmentally conscious traveller on the road right now I would like to know where to eat and stay for the night while exploring the sustainable city I´m currently in. --> This information can easily be found on a smartphone on the go, since the webpage has a mobile-first design with a simple and easy understandable layout.
-
 * As a traveller with many different kinds of interests I would like to check this page out, out of pure curiosity, to see what kinds of cities the environmentally conscious travellers would want to visit, and maybe travel there myself to see what these cities are like. --> This research can be done from home or on the go, beforehand or during the stay in the city, like described above.
 
 ### Validation of code
-- I used this website to validate my HTML by direct input.
-- I used this website to validate my CSS by direct input.
+- I used [this website](https://validator.w3.org/#validate_by_input) to validate my HTML by direct input.
+- I used [this website](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) to validate my CSS by direct input.
 - I used JS Hint to check my Javascript code for errors and potential problems.
 
 ### The responsiveness of the whole website
