@@ -7,16 +7,15 @@
       <h1 class="jumbotron-heading">The Coworking Swede</h1>
       <p class="lead text-muted">Find a Coworking space in Sweden</p>
       <p>
-    <label for="searchCitiesHomepage"></label>
-    <select class="custom-select" id="searchCitiesHomepage" style="width:200px;">
-      <option selected>Choose a city</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <label for="cityloop"></label>
+    <select class="custom-select" id="cityloop" name="city_name" style="width:200px;">
+      <option value="" label="Choose a city" selected="selected">Choose a city</option>
+      {% for cityloop in cities %}
+        <option value="{{cityloop.city_name}}">{{cityloop.city_name}}</option>
+      {% endfor %}
     </select>
       </p>
-      <button class="btn btn-outline-info" type="submit">Search</button>
+      <a href="{{url_for('search_cities') }}" type="button" class="btn btn-outline-info">Search</a>
     </div>
   </section>
 

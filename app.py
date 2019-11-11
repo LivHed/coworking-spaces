@@ -17,7 +17,10 @@ mongo = PyMongo(app)
 @app.route('/get_coworkingspaces')
 def get_coworkingspaces():
     return render_template('home.html', coworkingspaces=mongo.db.coworkingspaces.find())
-  
+
+@app.route('/search_cities')
+def search_cities():
+    return render_template('home.html', cities=mongo.db.cities.find())
     
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
