@@ -20,10 +20,10 @@ def get_coworkingspaces():
     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
 
 
-@app.route('/show_results', methods=['POST'])
-def show_results():
-    page_limit = 6  # Limit to three results per page for the pagination
-    return render_template('home.html')
+@app.route('/show_results/<city_name>', methods=['POST'])
+def show_results(city_name):
+    city_name = mongo.db.cities.find_one({".city_name": ObjectId(city_name)})
+    return render_template('home.html', city=city_name)
     
 
 @app.route("/about")
