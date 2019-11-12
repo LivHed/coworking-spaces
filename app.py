@@ -6,6 +6,7 @@ from bson.objectid import ObjectId
 # create an instance of flask and assign it to the app variable
 app = Flask(__name__)
 
+# Environment variables
 app.config["MONGO_DBNAME"] = 'coworkingSpacesDB'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
@@ -18,6 +19,10 @@ mongo = PyMongo(app)
 def get_coworkingspaces():
     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
 
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
     
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
