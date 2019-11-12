@@ -8,13 +8,13 @@ In this app I have used the programming language Python along with the Python mi
 
 
 ## UX
-After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to only swedish spaces for myself and my fellow swedish coworkers. My goals with the design was set to:
-
-* To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with button showing clear directions.
-* To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
 
 ### Design process
-* The fonts that I chose to use for this website are Railway (sans serif) because..
+After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to only swedish spaces for myself and my fellow swedish coworkers. My goals with the design was set to:
+
+* To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with buttons showing clear directions.
+* To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
+* The fonts that I chose to use for this website are Railway (sans serif) because it presents the content in a stylistic and easy-to-read way.
 
 ### Wireframes
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
@@ -46,7 +46,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 
 ## Technologies Used
 #### Languages
-* [HTML5](), [CSS3]() and [Javascript]() 
+* [HTML5](https://www.w3schools.com/html/html5_intro.asp), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
 * [Python](https://www.python.org/download/releases/3.0/)
 
 #### Libraries
@@ -57,13 +57,14 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [Font Awesome](https://fontawesome.com/) for the icons. 
 * [PyMongo](https://api.mongodb.com/python/current/) to be able to work with MongoDB from Python.
 * [Flask](https://flask.palletsprojects.com/en/1.0.x/) to be able to build and render pages. 
+* [Jinja](https://jinja.palletsprojects.com/en/2.10.x/) to get and display data from the backend with template inheritance and loops in html.
 
 #### Tools
 * [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/) for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github.
-* GitHub to store and share the project remotely. 
-* MongoDB Atlas is the database I have used for this project.
-* Balsamiq to create my wireframes as a part of the design process, with a simple yet goodlooking result.
-* Responsinator was used to check the responsiveness of the page.
+* [GitHub](https://github.com/) to store and share the project remotely.
+* [MongoDB Atlas](https://www.mongodb.com/cloud) is the database I have used for this project.
+* [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
+* [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page.
 
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
