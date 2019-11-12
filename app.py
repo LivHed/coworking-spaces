@@ -20,12 +20,18 @@ def get_coworkingspaces():
     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
 
 
-@app.route('/show_results/<city_name>', methods=['POST'])
-def show_results(city_name):
-    city_name = mongo.db.cities.find_one({".city_name": ObjectId(city_name)})
-    return redirect(url_for('get_coworkingspaces'))
-  #  return render_template('home.html', city=city_name)
+
+@app.route('/show_results', methods=['POST'])
+def show_results():
     
+    city_name = request.form['city_name']  
+    city_results = mongo.db.cities.find({"city_name": (city_name)})
+ #  return redirect(url_for('get_coworkingspaces'))
+    return render_template('home.html', cities=city_name, city=city_results)
+
+    
+  #  city = request.form['city']      
+  #  filtered_city = mongo.db.cities.find({"region": (city)})
 
 @app.route("/about")
 def about():
