@@ -123,21 +123,21 @@ This website is deployed on Heroku, following these steps:
 * Then,create a Procfile with the command `echo web: python app.py > Procfile` in the terminal. 
 * Then type the `git add` and `git commit` commands for these new files and then `git push` to GitHub.
 * Then go to the Heroku website and go to Dashboard and click on the New button, and then click on Create new app. Name it and set the region to Europe.
-* 
+* In the new Heroku app, Click on Deploy. In the section Deployment method, click on Github.
+* Choose the correct GitHub repository to link it to the Heroku app.
+* In the section Automatic Deploys, click on Enable automatic deploys, from master branch.
+* Now go to Settings and click on Reveal config vars, and set them to: 
+```
+IP : 0.0.0.0
+PORT: 5000
+MONGO_URI: mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+SECRET_KEY: <your_secret_key>
+```
+* You will get the MONGO_URI in your created database on the Mongo Db Atlas page. Keep that string and the secret key as environment variables so only you can access them.
+* Click on the button Open app in the top right corner and you can now view your deployed app.
 
-
-
-* In the created Heroku app, Click on Deploy. In Deployment method, click on Github.
-*
-* 
-* Scroll down the page to GitHub Pages section.
-* In the source dropdown you choose the alternative master branch.
-* The published link will appear in the GitHub Pages section.
-* Click on the link and you will reach the website.
-* Upon new commits to the master branch, the deployed site will automatically update. The landing page must be named index.html for the site to deploy correctly on GitHub pages.
-
-* To run locally- You can clone this repository directly into the editor you prefer by following these steps:
-
+To run locally- You can clone this repository directly into the editor you prefer by following these steps:
+CHANGE
 Click on the green "clone or download" button on the repository page
 Or paste following: git clone https://github.com/LivHed/mgt-map.git into your terminal. Press enter, and your local clone will be created.
 The last step is to cut ties with this GitHub repository. To do this type git remote rm origin into the terminal.
