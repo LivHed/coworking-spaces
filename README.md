@@ -1,10 +1,14 @@
 # The Coworking Swede 
 This is my Milestone Project 3: Data Centric Development - Code Institute.
 
-This is the page for coworkers that wants to find and go to a coworking space located in swedish cities, to use when it suits them. Check it out here!
+This is a page for people that wants to find and use a coworking space located in swedish cities, and also be able to add, edit and delete coworking spaces.
+The idea of this web page is that the database will grow over time, when users add more coworking spaces. My aim is that the co-creation of the page will provide a sense of community; A page for coworkers, by coworkers.
+In this app I have used the programming language Python along with the Python micro web framework Flask, and the document-based database MongoDB.
+[Check it out here!]()
+
 
 ## UX
-After doing research looking at websites with coworking spaces I found that there was not any pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to onlly swedish for myself and my fellow swedish coworkers. My goals with the design was set to:
+After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to only swedish spaces for myself and my fellow swedish coworkers. My goals with the design was set to:
 
 * To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with button showing clear directions.
 * To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
@@ -12,14 +16,14 @@ After doing research looking at websites with coworking spaces I found that ther
 ### Design process
 * The fonts that I chose to use for this website are Railway (sans serif) because..
 
+### Wireframes
+The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
+
 ### User stories
 * As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them.
 * As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others.
 * As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down.
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.
-
-### Wireframes
-The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
 
 ### Features
 #### Existing Features
