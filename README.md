@@ -113,13 +113,23 @@ More results button
 ### Bugs I came across while creating the site and while testing it
 
 * When clicking on..  the results are not shown..
-* An Api initMap2 error shows in the console "You have included the Google Maps JavaScript API multiple times on this page. This may cause unexpected errors". I tried to solve it by add id, get the map from the body, to remove it first and add a new one to it, but it did not work. This doesn´t affect the functionality of the page, and will be adressed later on.
-* When running the code through JS Hint it gives the messages Three unused variables, Two undefined variables and a warning. Since this is not affecting the functionality of the page I will adress that later.
+* 
+* 
 
 ## Deployment
 This website is deployed on Heroku, following these steps:
 
-* In the repository, click on settings in top right corner.
+* First, create a `requirements.txt` file using the `pip freeze > requirements.txt` command in the terminal. 
+* Then,create a Procfile with the command `echo web: python app.py > Procfile` in the terminal. 
+* Then type the `git add` and `git commit` commands for these new files and then `git push` to GitHub.
+* Then go to the Heroku website and go to Dashboard and click on the New button, and then click on Create new app. Name it and set the region to Europe.
+* 
+
+
+
+* In the created Heroku app, Click on Deploy. In Deployment method, click on Github.
+*
+* 
 * Scroll down the page to GitHub Pages section.
 * In the source dropdown you choose the alternative master branch.
 * The published link will appear in the GitHub Pages section.
@@ -135,11 +145,11 @@ The last step is to cut ties with this GitHub repository. To do this type git re
 ## Credits
 
 ## Content
-* The content on the website was written by me.
-* The results showing with accommodations and restaurants are shown thanks to Google Maps Javascript API.
+* The content on the website was written by me, after doing research in other coworking space pages and after reading about the concept.
+* The content that are showing in the results are gathered from the coworking spaces own web pages, and I´m making sure me and other people are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and people that are using their spaces.
 
 ## Media
-* The cities are chosen because of inspiration from the company Arcadis homepage, and the listed top 10 most sustainable cities according to their Sustainable Cities Index.
+* 
 
 ## Acknowledgements
-* For the ... I copied the code snippet for the Inline custom form controls, from W3Schools on this page and then modified it to what suited my needs.
+* For the results showing of the coworking spaces I copied the Album example code from this page https://getbootstrap.com/docs/4.0/examples/album/ and then modified the layout for my needs.
