@@ -117,6 +117,15 @@ More results button
 * 
 
 ## Deployment
+
+### Local Deployment
+For local deployment you must have an IDE, like [Visual Studio Code](https://code.visualstudio.com/) and the following to be installed locally on your machine: [git](https://git-scm.com/), [PIP](https://pip.pypa.io/en/stable/installing/), [Python 3](https://www.python.org/downloads/), [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/) and a [MongoDB Atlas account](https://docs.atlas.mongodb.com/).
+* After creating your own folder and are in it, type this in to the terminal `git clone https://github.com/LivHed/coworking-spaces.git`
+* Then run this command `pip install --upgrade pip`
+* To be followed by this command `pip install -r requirements.txt` to install the required modules. 
+* You can run the app with the command `python -m flask run`
+
+### Heroku Deployment
 This website is deployed on Heroku, following these steps:
 
 * First, create a `requirements.txt` file using the `pip freeze > requirements.txt` command in the terminal. 
@@ -135,12 +144,6 @@ SECRET_KEY: <your_secret_key>
 ```
 * You will get the MONGO_URI in your created database on the Mongo Db Atlas page. Keep that string and the secret key as environment variables so only you can access them.
 * Click on the button Open app in the top right corner and you can now view your deployed app.
-
-To run locally- You can clone this repository directly into the editor you prefer by following these steps:
-CHANGE
-Click on the green "clone or download" button on the repository page
-Or paste following: git clone https://github.com/LivHed/mgt-map.git into your terminal. Press enter, and your local clone will be created.
-The last step is to cut ties with this GitHub repository. To do this type git remote rm origin into the terminal.
 
 ## Credits
 
