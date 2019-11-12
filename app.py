@@ -20,9 +20,16 @@ def get_coworkingspaces():
     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
 
 
+@app.route('/show_results', methods=['POST'])
+def show_results():
+    page_limit = 6  # Limit to three results per page for the pagination
+    return render_template('home.html')
+    
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+    
     
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
