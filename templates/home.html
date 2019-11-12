@@ -1,30 +1,31 @@
 {% extends 'base.html' %} {% block content %}
 
 
+<div class "row">
+  <h1 class="text-center">The Coworking Swede</h1>
+  <p class="lead text-muted text-center">Find a Coworking space in Sweden</p>
+  <form action="{{ url_for('get_coworkingspaces') }}" method="POST" class="col-12">
 
- <!-- <section class="jumbotron text-center" action="{{ url_for('get_coworkingspaces') }}" method="POST">   -->
-   <section class ="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">The Coworking Swede</h1>
-      <p class="lead text-muted">Find a Coworking space in Sweden</p>
-      <p>
-    <label for="cityloop"></label>
-    <select class="custom-select" id="cityloop" name="city_name" style="width:200px;">
-      <option value="" label="Choose a city" selected="selected">Choose a city</option>
- <!--     {% for cityloop in cities %}
-        <option value="{{cityloop.city_name}}">{{cityloop.city_name}}</option>
-      {% endfor %}   -->
-      <option>Stockholm</option>
-      <option>Göteborg</option>
-      <option>Malmö</option>
-      <option>Helsingborg</option>
-      <option>Lund</option>
-      <option>Umeå</option>
+    <div class="row">
+      <div class="form-group col-12">
+        <label for="exampleFormControlSelect1"></label>
+        <select class="form-control" id="city" name="city_name">
+      <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
+      {% for city in cities %}
+        <option value="{{city.city_name}}">{{city.city_name}}</option>
+      {% endfor %}
     </select>
-      </p>
-      <a type="button" class="btn btn-outline-info" href={{url_for('get_coworkingspaces')}}>Search</a>
+      </div>
     </div>
-  </section>
+
+    <div class="row">
+      <div class="col-12">
+        <a type="button" class="btn btn-m btn-outline-info text-center" href={{url_for( 'get_coworkingspaces')}}>Search</a>
+      </div>
+      </div>
+  </form>
+  </div>
+
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -52,7 +53,7 @@
   </div>
 
 
-<!--Pagination-->
+  <!--Pagination-->
 
   <div class="container">
     <div class="row">
@@ -79,4 +80,4 @@
   </div>
 
 
-{% endblock %}
+  {% endblock %}
