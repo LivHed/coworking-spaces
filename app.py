@@ -23,7 +23,8 @@ def get_coworkingspaces():
 @app.route('/show_results/<city_name>', methods=['POST'])
 def show_results(city_name):
     city_name = mongo.db.cities.find_one({".city_name": ObjectId(city_name)})
-    return render_template('home.html', city=city_name)
+    return redirect(url_for('get_coworkingspaces'))
+  #  return render_template('home.html', city=city_name)
     
 
 @app.route("/about")
