@@ -46,14 +46,20 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 
 ## Technologies Used
 #### Languages
-* The languages I have used for this project is HTML5, CSS3 and Javascript. I have used the Bootstrap gridsystem with the built in media queries for the content to be responsive.
+* [HTML5](), [CSS3]() and [Javascript]() 
+* [Python](https://www.python.org/download/releases/3.0/)
 
 #### Libraries
-* The libraries included are the Javascript libraries JQuery and Popper.js and Bootstrap JS.
 * [Google Fonts](https://fonts.google.com/) is used to style the fonts of the website.
+* [Bootstrap](https://www.bootstrapcdn.com/) for the content to be responsive and a simple structure of the web page.
+* [JQuery](https://jquery.com/) to simplify DOM manipulation, and for the Bootsrap components that requires the use of JavaScript to function.
+* [Popper.js](https://popper.js.org/) also for the Bootsrap components that requires the use of JavaScript to function.
+* [Font Awesome](https://fontawesome.com/) for the icons. 
+* [PyMongo](https://api.mongodb.com/python/current/) to be able to work with MongoDB from Python.
+* [Flask](https://flask.palletsprojects.com/en/1.0.x/) to be able to build and render pages. 
 
 #### Tools
-* AWS Cloud9 IDE for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github.
+* [AWS Cloud9 IDE](https://aws.amazon.com/cloud9/) for the development of this site: writing, debugging and running my code. GIT was then used to push files to Github.
 * GitHub to store and share the project remotely. 
 * MongoDB Atlas is the database I have used for this project.
 * Balsamiq to create my wireframes as a part of the design process, with a simple yet goodlooking result.
