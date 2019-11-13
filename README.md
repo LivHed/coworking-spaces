@@ -27,22 +27,20 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 
 ### Features
 #### Existing Features
-* The presentation text is placed under the name of the page and provides a short introduction to the intention of the page, which give the users a direct way of reading about the page the first thing they do when they land on the page.
-* The dropdown menu with the cities in it is placed underneath the introduction text as a natural next step to follow after reading about it and follow the directions given in the text.
-* The functions of the radio buttons when clicked on them is that they return results with either accommodations or restaurants in the chosen city, depending on which button you click, and shows icon markers of the found places. The results are displayed in a discrete way with no background color to keep the simple design of the whole page.
-* The Result list is shown in a responsive way, 20 results at a time. Up to 60 results can be shown for either restaurants or accommodations in each city, if found within the radius I have specified.
-* The More results button shows 20 more results when pressing it.
-* The manual zoom function of the map is kept for the users to be able to zoom in even more themselves to see a close-up of where the places are located.
-* The background color is supposed to give the users a feeling of the page´s authenticity when it comes to environmental sustainable thinking, and relate to the title of the page with its green insinuation.
-* The name of the webpage is placed in the navbar in a center position, like a brand or logo, meant to be discrete with the transparent background of the navbar.
+* The presentation text is placed under the name of the page and provides 
+* The select menu with the cities in it is placed underneath the introduction text as a natural next call to action to follow.
+* 
+* The Coworking spaces are shown in album cards, in a responsive way, 
+* The fields in the forms are required, so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
+* The name of the webpage is placed in the navbar in the left corner.
 
 #### Features Left to Implement
-* In the future I want to add more ..
+* In the future I want to add authenication with Sign up / Log in forms, so that not anyone can edit information about the coworking spaces.
 * I want to add ..
 * If I have had more time in the project I would have focused on and worked more with the UI.
-* If I have had more time I would also have added a footer that was sticked to the bottom of the page.
-* I want to add info windows to show the name and adress of the place in a small window when clicking on the iconmarkers, and also those details to be shown in the result list beside the names.
-* In the future I also want to add an option to perform a textSearch in the cities, to narrow down the search to be more related to "green travels" with specific words related to sustainability, like "organic" or "sustainable".
+* If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
+* 
+* 
 
 ## Technologies Used
 #### Languages
