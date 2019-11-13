@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+    <h3 class="text-center">Contact Us</h3>
+    
+    <form action="{{ url_for('contact_page') }}" method="GET, POST" class="col-12">
+
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="emailaddress">Email address</label>
+                <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="yourname">Your Name</label>
+                <input class="form-control" type="text" id="yourname" placeholder="Your name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-12">
+                <label for="yourmessage">Your message</label>
+                <textarea class="form-control" id="yourmessage" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-m btn-outline-secondary">Send</button>
+            </div>
+        </div>
+
+    </form>
+  </div>
+
+{% endblock %}
