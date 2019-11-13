@@ -24,8 +24,12 @@ def get_coworkingspaces():
 @app.route('/show_results', methods=['POST'])
 def show_results():
     
-    city_name = request.form['city_name']  
-    city_results = mongo.db.cities.find({"city_name": (city_name)})
+    if request.method == 'POST':
+    
+      city_name = request.form['city_name']  
+      city_results = mongo.db.cities.find({"city_name": (city_name)})
+
+
  #  return redirect(url_for('get_coworkingspaces'))
     return render_template('home.html', cities=city_name, city=city_results)
 
