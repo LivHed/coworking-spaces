@@ -94,6 +94,7 @@ Here I present how my website meet the needs of the users that will visit the si
 - The Google maps Javascript API and Places library is responsive in itself and is set to respond to the interactions of the user.
 
 ### Testing process scenarios
+CHANGE THESE to this projects functions.. 
 Dropdown menu with cities
 1. Click on the dropdown menu.
 2. Choose a city to see that it´s zoomed in on as intended.
