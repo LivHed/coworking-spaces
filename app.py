@@ -51,7 +51,7 @@ def add_coworkingspace():
     return render_template('addspace.html', cities=mongo.db.cities.find())
 
     
-@app.route('/insert_coworkingspace', methods=['POST'])
+@app.route('/insert_coworkingspace', methods=['GET', 'POST'])
 def insert_coworkingspace():
     coworkingspaces = mongo.db.coworkingspaces
     coworkingspaces.insert_one(request.form.to_dict())
@@ -88,6 +88,13 @@ def update_coworkingspace(coworkingspace_id):
 def delete_coworkingspace(coworkingspace_id):
     mongo.db.coworkingspaces.remove({'_id': ObjectId(coworkingspace_id)})
     return redirect(url_for('get_coworkingspaces'))
+
+
+#--------------------------------Contact page----------------------------
+
+@app.route('/contact_page', methods=['GET', 'POST'])
+def contact_page():
+    return render_template('contact.html')
 
 
     
