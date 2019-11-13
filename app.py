@@ -6,7 +6,7 @@ from bson.objectid import ObjectId
 # creates an instance of flask and assign it to the app variable
 app = Flask(__name__)
 
-# Environment variables
+# ---------Environment variables-----------------------------------
 app.config["MONGO_DBNAME"] = 'coworkingSpacesDB'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
@@ -20,14 +20,14 @@ def get_coworkingspaces():
     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
 
 
-# ------------------------Show results page--------------------------
+# ------------------------Show results page------------------------
 @app.route('/show_results', methods=['POST'])
 def show_results():
    
 #    print(request.method)
 #    print(request.form)
     
- #   if request.method == 'POST':
+ #  if request.method == 'POST':
     
      city_name = request.form['city_name']  
      city_results = mongo.db.cities.find({"city_name": (city_name)})
@@ -35,17 +35,17 @@ def show_results():
      print(city_name)
      print(city_results)
      
-      return render_template('home.html', cities=city_name, city=city_results)
+     return render_template('home.html', cities=city_name, city=city_results)
 
 
 
-# ---------------------About page--------------------------
+# ---------------------About page--------------------------------
 @app.route("/about")
 def about():
     return render_template("about.html")
   
   
-# ---------------Add coworking spaces page---------------------
+# ---------------Add coworking spaces page-----------------------
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
     return render_template('addspace.html', cities=mongo.db.cities.find())
