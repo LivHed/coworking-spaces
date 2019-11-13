@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from bson.json_util import dumps, loads
 
 # creates an instance of flask and assign it to the app variable
 app = Flask(__name__)
@@ -17,25 +18,19 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_coworkingspaces')
 def get_coworkingspaces():
-    return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=mongo.db.coworkingspaces.find())
+    coworkingspaces = mongo.db.coworkingspaces.find()
+    return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=loads(dumps(coworkingspaces)))
 
 
 # ------------------------Show results page------------------------
 @app.route('/show_results', methods=['POST'])
 def show_results():
-   
-#    print(request.method)
-#    print(request.form)
-    
- #  if request.method == 'POST':
     
      city_name = request.form['city_name'] 
      city_results = mongo.db.coworkingspaces.find({"city_name": (city_name)})
-
-     print(city_name)
-     print(city_results)
      
-     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=city_results)
+     
+     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=loads(dumps(city_results)))
 
 
 
@@ -53,8 +48,19 @@ def add_coworkingspace():
     
 @app.route('/insert_coworkingspace', methods=['GET', 'POST'])
 def insert_coworkingspace():
+    
+    coworkingspace = {
+        'city_name':request.form.get('city_name'),
+        'coworking_name':request.form.get('coworking_name'),
+        'coworking_description': request.form.get('coworking_description'),
+        'coworking_address': request.form.get('coworking_address'),
+        'opening_hours':request.form.get('opening_hours'),
+        'website_url':request.form.get('website_url'),
+        'img_url':request.form.get("img_url") if request.form.get("img_url") is not None else 'https://aliceasmartialarts.com/wp-content/uploads/2017/04/default-image.jpg'
+    }
+    
     coworkingspaces = mongo.db.coworkingspaces
-    coworkingspaces.insert_one(request.form.to_dict())
+    coworkingspaces.insert_one(coworkingspace)
     return redirect(url_for('get_coworkingspaces'))
     
 
