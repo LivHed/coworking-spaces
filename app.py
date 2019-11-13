@@ -29,13 +29,13 @@ def show_results():
     
  #  if request.method == 'POST':
     
-     city_name = request.form['city_name']  
-     city_results = mongo.db.cities.find({"city_name": (city_name)})
+     city_name = request.form['city_name'] 
+     city_results = mongo.db.coworkingspaces.find({"city_name": (city_name)})
 
      print(city_name)
      print(city_results)
      
-     return render_template('home.html', cities=city_name, city=city_results)
+     return render_template('home.html', cities=mongo.db.cities.find(), coworkingspaces=city_results)
 
 
 
