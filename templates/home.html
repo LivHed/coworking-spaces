@@ -22,63 +22,65 @@
       <div class="col-12">
         <button class="btn btn-m btn-outline-secondary" type="submit" name="action">Search</button>
       </div>
-      </div>
+    </div>
   </form>
-  </div>
+</div>
 
 <!-- This code is originally copied from this Album Bootstrap example https://getbootstrap.com/docs/4.0/examples/album/ and then I
 modified the layout for my needs-->
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {% for coworkingspace in coworkingspaces %}
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
-            <div class="card-body">
-              <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
-              <p class="card-text">{{coworkingspace.coworking_description}}</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">{{coworkingspace.city_name}}</li>
-                <li class="list-group-item">{{coworkingspace.coworking_address}}</li>
-                <li class="list-group-item">{{coworkingspace.opening_hours}}</li>
-                <li class="list-group-item"> <a target="blank" class="card-link" href="{{coworkingspace.website_url}}">Their homepage</a> </li>
-                <li class="list-group-item"><a type="button" class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit_coworkingspace', coworkingspace_id=coworkingspace._id) }}">Edit information</a> </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-
-  <!--Pagination-->
-
+<div class="album py-5 bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-            </li>
-          </ul>
-        </nav>
+      {% if coworkingspaces is defined and coworkingspaces|length > 0 %} {% for coworkingspace in coworkingspaces %}
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" data-src="" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
+          <div class="card-body">
+            <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
+            <p class="card-text">{{coworkingspace.coworking_description}}</p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{coworkingspace.city_name}}</li>
+              <li class="list-group-item">{{coworkingspace.coworking_address}}</li>
+              <li class="list-group-item">{{coworkingspace.opening_hours}}</li>
+              <li class="list-group-item"> <a target="blank" class="card-link" href="{{coworkingspace.website_url}}">Their homepage</a> </li>
+              <li class="list-group-item"><a type="button" class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit_coworkingspace', coworkingspace_id=coworkingspace._id) }}">Edit information</a> </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      {% endfor %} {% else %}
+      <div>No Coworking spaces found</div>
+      {% endif %}
     </div>
   </div>
+</div>
 
 
-  {% endblock %}
+<!--Pagination-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
