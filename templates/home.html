@@ -13,7 +13,7 @@
       <div class="form-group col-12">
         <label for="exampleFormControlSelect1"></label>
         <select class="form-control" id="city" name="city_name">
-          <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
+          <option value="" disabled selected>Choose a city</option>
            {% for city in cities %}
             <option value="{{city.city_name}}">{{city.city_name}}</option>
            {% endfor %}
