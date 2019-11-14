@@ -4,7 +4,7 @@ This is my Milestone Project 3: Data Centric Development - Code Institute.
 This is a page for people that wants to find and use a coworking space located in swedish cities, and also be able to add, edit and delete coworking spaces.
 The idea of this web page is that the database will grow over time, when users add more coworking spaces. My aim is that the co-creation of the page will provide a sense of community; A page for coworkers, by coworkers.
 In this app I have used the programming language Python along with the Python micro web framework Flask, and the document-based database MongoDB.
-[Check it out here!]()
+[Check it out here!](https://coworking-swede.herokuapp.com/)
 
 
 ## UX
@@ -15,6 +15,9 @@ After doing research looking at websites with coworking spaces I found that ther
 * To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with buttons showing clear directions.
 * To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
 * The fonts that I chose to use for this website are Railway (sans serif) because it presents the content in a stylistic and easy-to-read way.
+* I chose to use 10 of the biggest cities in Sweden to choose from in the search of coworking spaces, since there will be coworking spaces in these cities to choose from for the user to add.
+
+Since this page is supposed to handle the CRUD functionality (Create, Read, Update and Delete) I planned for this web page to give a sense of "Let´s do it together", and I´m specifying the guidelines in the About page. 
 
 ### Wireframes
 The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
@@ -28,9 +31,9 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 ## Features
 #### Existing Features
 * The presentation text is placed under the name of the page and provides 
-* The select menu with the cities in it is placed underneath the introduction text as a natural next call to action to follow.
+* The select menu with the cities and the search button is placed underneath the name of the page and the sentence with what you can do on this landing page, as a natural next step of action to follow.
 * 
-* The Coworking spaces are shown in album cards, in a responsive way, 
+* The Coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. 
 * The fields in the forms are required, so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
 * The name of the webpage is placed in the navbar in the left corner.
 
@@ -39,7 +42,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * I want to add a timepicker to the Add and Edit forms to choose opening and closing times for the coworking spaces, from dropdowns. This for a more simple and user-friendly way to add this than what I currently have.
 * If I have had more time in the project I would have focused on and worked more with the UI.
 * If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
-*
+* In the future I would want for users to add cities, at the moment only I can add cities from the database. 
 * 
 
 ## Technologies Used
@@ -88,8 +91,8 @@ image_url: "https://coworker.imgix.net/photos/sweden/stockholm/impact-hub-stockh
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
 
-* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. -->
-* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. -->
+* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. --> This is possible to do from the landing page, where it´s clear what to do. The first thing you see is the text that tells you that you can find a coworking space on this page, clearly with using the select menu of cities and a search button.
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. --> THis need can be met as in the example above, with the search function for the cities that are presented in the dropdown menu. 
 * As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down. -->
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.-->
 
@@ -115,20 +118,25 @@ Here I present how my website meet the needs of the users that will visit the si
 - The Google maps Javascript API and Places library is responsive in itself and is set to respond to the interactions of the user.
 
 ### Testing process scenarios
-CHANGE THESE to this projects functions.. 
-Dropdown menu with cities
-1. Click on the dropdown menu.
-2. Choose a city to see that it´s zoomed in on as intended.
-3. Try this with all of the cities one by one, and verify that the function is working for all of them.
 
-Radio buttons
+#### Manual testing
+-Choose a City- select menu and -Search- button
+1. Click on the dropdown menu.
+2. Choose a city.
+3. Click on the search button.
+4. Try this with all of the cities one by one, and verify that results with cards are showing if the chosen city matches the city on the card.
+5. Verify that the text "No coworking spaces found" is showing, if no coworking spaces exist in the database from the chosen city.
+
+Edit a coworking space
 1. Click on the accommodations radio button for every selected city and verify that the results of accommodations are showing on the map with the proper marker icons.
 2. Click on the restaurants radio button for every selected city and verify that the results of restaurants are showing on the map with the proper marker icons.
 
-More results button
-1. When the first 20 results are showing in the Results list, click on More results button and verify that 20 new results are showing in the list.
-2. Click the button again and verify that 20 more results are showing.
-3. Verify that the button is unable to click again when 60 results have been shown and the button have been clicked two times.
+Delete a coworking space
+
+
+Add a coworking space
+1. 
+
 
 ### Bugs I came across while creating the site and while testing it
 
