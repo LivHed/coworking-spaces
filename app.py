@@ -57,7 +57,8 @@ def add_coworkingspace():
 @app.route('/insert_coworkingspace', methods=['GET', 'POST'])
 def insert_coworkingspace():
 
-    image_url = request.form.get("image_url") if request.form.get("image_url") is not None else "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg"
+  #  image_url = request.form.get("image_url") if request.form.get("image_url") is not None else "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg"
+     
 
     coworkingspace = {
         'city_name':request.form.get('city_name'),
@@ -66,7 +67,7 @@ def insert_coworkingspace():
         'coworking_address': request.form.get('coworking_address'),
         'opening_hours':request.form.get('opening_hours'),
         'website_url':request.form.get('website_url'),
-        'image_url': image_url
+        'image_url': request.form.get("image_url")
     }
     
     coworkingspaces = mongo.db.coworkingspaces
@@ -88,7 +89,7 @@ def edit_coworkingspace(coworkingspace_id):
 def update_coworkingspace(coworkingspace_id):
     coworkingspaces = mongo.db.coworkingspaces
     
-    image_url = request.form.get("image_url") if request.form.get("image_url") is not None else "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg"
+  #  image_url = request.form.get("image_url") if request.form.get("image_url") is not None else "https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg"
 
     
     coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)},
@@ -99,7 +100,7 @@ def update_coworkingspace(coworkingspace_id):
         'coworking_address': request.form.get('coworking_address'),
         'opening_hours':request.form.get('opening_hours'),
         'website_url':request.form.get('website_url'),
-        'image_url': image_url
+        'image_url': request.form.get("image_url")
     })
     return redirect(url_for('get_coworkingspaces'))
 
