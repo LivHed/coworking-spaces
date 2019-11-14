@@ -1,22 +1,27 @@
 {% extends 'base.html' %} {% block content %}
 
 
+   <!-- The select menu where you can choose a city. 
+   A for loop is used to loop trhough the cities to get data from the backend from the cities collection -->
+
 <div class "row">
   <h1 class="text-center">The Coworking Swede</h1>
-  <p class="lead text-muted text-center">Find a Coworking space in Sweden</p>
-  <form action="{{ url_for('show_results') }}" method="POST" class="col-12">
+    <p class="lead text-muted text-center">Find a Coworking space in Sweden</p>
+     <form action="{{ url_for('show_results') }}" method="POST" class="col-12">
 
     <div class="row">
       <div class="form-group col-12">
         <label for="exampleFormControlSelect1"></label>
         <select class="form-control" id="city" name="city_name">
-      <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
-      {% for city in cities %}
-        <option value="{{city.city_name}}">{{city.city_name}}</option>
-      {% endfor %}
-    </select>
+          <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
+           {% for city in cities %}
+            <option value="{{city.city_name}}">{{city.city_name}}</option>
+           {% endfor %}
+        </select>
       </div>
     </div>
+
+    <!-- The search button -->
 
     <div class="row">
       <div class="col-12">
@@ -26,38 +31,38 @@
   </form>
 </div>
 
-<!-- This code is originally copied from this Album Bootstrap example https://getbootstrap.com/docs/4.0/examples/album/ and then I
-modified the layout for my needs.
-First I´m using an if statement to check if there is any coworking spaces in the chosen city and in that case show them, else show No coworking spaces found.
-Then, I´m using an if statement to check if an image url is added, if not use the default image-->
+
+   <!-- This code is originally copied from this Album Bootstrap example https://getbootstrap.com/docs/4.0/examples/album/ and then I
+   modified the layout for my needs.
+   First I´m using an if statement to check if there is any coworking spaces in the chosen city and in that case show them, else show the No coworking spaces found text.
+   Then, I´m using a for loop to be able to fetch the data from the backend for the coworkingspaces to display this on the cards.
+   Then, I´m using an if statement to check if an image url is added to this input field, if not use the default image-->
 
 <div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row">
-      {% if coworkingspaces is defined and coworkingspaces|length > 0 %} {% for coworkingspace in coworkingspaces %}
-      <div class="col-sm-12 col-lg-4">
-        <div class="card mb-4 box-shadow">
+   <div class="container">
+     <div class="row">
+       {% if coworkingspaces is defined and coworkingspaces|length > 0 %} {% for coworkingspace in coworkingspaces %}
+        <div class="col-sm-12 col-lg-4">
+         <div class="card mb-4 box-shadow">
           {% if coworkingspace.image_url %}
-           <img class="card-img-top" data-src="{{coworkingspace.image_url}}" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
-          {% else %}
-           <img class="card-img-top" data-src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="" style="height: 225px; width: 100%; display: block;" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" data-holder-rendered="true">
-          {% endif %}
-          <div class="card-body">
-            <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
-            <p class="card-text">{{coworkingspace.coworking_description}}</p>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{coworkingspace.city_name}}</li>
-              <li class="list-group-item">{{coworkingspace.coworking_address}}</li>
-              <li class="list-group-item">{{coworkingspace.opening_hours}}</li>
-              <li class="list-group-item"> <a target="blank" class="card-link" href="{{coworkingspace.website_url}}">Visit the homepage</a> </li>
-              <li class="list-group-item"><a type="button" class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit_coworkingspace', coworkingspace_id=coworkingspace._id) }}">Edit information</a> </li>
-            </ul>
-          </div>
+            <img class="card-img-top" data-src="{{coworkingspace.image_url}}" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true"> {% else %}
+            <img class="card-img-top" data-src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="" style="height: 225px; width: 100%; display: block;" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" data-holder-rendered="true">          {% endif %}
+             <div class="card-body">
+               <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
+                <p class="card-text">{{coworkingspace.coworking_description}}</p>
+                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{coworkingspace.city_name}}</li>
+                    <li class="list-group-item">{{coworkingspace.coworking_address}}</li>
+                    <li class="list-group-item">{{coworkingspace.opening_hours}}</li>
+                    <li class="list-group-item"> <a target="blank" class="card-link" href="{{coworkingspace.website_url}}">Visit the homepage</a> </li>
+                    <li class="list-group-item"><a type="button" class="btn btn-sm btn-outline-secondary" href="{{ url_for('edit_coworkingspace', coworkingspace_id=coworkingspace._id) }}">Edit information</a> </li>
+                 </ul>
+              </div>
+           </div>
         </div>
-      </div>
-      {% endfor %} {% else %}
-      <div>No Coworking spaces found</div>
-      {% endif %}
+         {% endfor %} {% else %}
+          <div>No Coworking spaces found</div>
+         {% endif %}
     </div>
   </div>
 </div>
