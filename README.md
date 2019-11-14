@@ -43,6 +43,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
 * In the future I would want for users to add cities, at the moment only I can add cities from the database. 
 * I also want to add pagination to show only 3 or 6 cards per page. 
+* Since this project did not require authentication, nothing happends when you click on the Send button in the Contact form, this is something I´ll fix later when there is time.
 
 ## Technologies Used
 #### Languages
@@ -121,16 +122,31 @@ Here I present how my website meet the needs of the users that will visit the si
 5. Verify that the text "No coworking spaces found" is showing, if no coworking spaces exist in the database from the chosen city.
 
 Edit a coworking space
-1. Click on the accommodations radio button for every selected city and verify that the results of accommodations are showing on the map with the proper marker icons.
-2. Click on the restaurants radio button for every selected city and verify that the results of restaurants are showing on the map with the proper marker icons.
+1. Click on the Edit button on a card containing information about a coworking space. 
+2. Verify that you are redirected to the Edit Coworking space page.
+3. Verify that it´s possible to choose one of the cities from the select menu.
+3. Change the pre-filled fields if you want.
+4. Check that all of the fields are required, leave one by one empty and click on the update button, and verify that it´s not possible to click on the Update button if the fields are not filled in.
+5. Try to leave the image link field empty and verify that this is the only field you can leave empty and still be able to click on the Update button to be redirected to the landing page and see the updated card with a default image displayed. 
 
 Delete a coworking space
-1. 
-2. 
+1. On the Edit page, click on the Delete button
+2. verify that the modal is showing and that you will be given one more chance to be sure that you want to delete this coworking space. 
+3. Click on the No, go back button and verify that you are back on the Edit page.
+4. If you choose to click on the Yes, I´m sure button, verify that the coworking space have been deleted when you get redirected to the landing page. 
 
 Add a coworking space
-1. 
+1. Click in the navbar on Add a coworking space.
+2. Verify that it´s possible to choose one of the cities from the select menu.
+2. Fill the fields with your information about a coworking space you have in mind. 
+3. Check that all of the fields are required, leave one by one empty and click on the Add button, and verify that it´s not possible to add a new coworking space if the fields are not filled in.
+4. Try to submit the coworking space without a link to an image.
+5. Verify that this is the only field you can leave empty and still be able to click on the Add button to redirect you to the landing page and that you can see a default image displayed in the card with the new coworking space you just created.
 
+Contact form
+1. Click on the Contact page in the navbar.
+2. Fill in the fields, verify that they are required by leaving one out, and see that a text shows that says that you have to fill in that field.
+3. Click on the Submit button and verify that the form is not submitted, you are still on the page. (This is because this project did not require authentication, and is therefore something I´ll add later when there is time.)
 
 ### Bugs I came across while creating the site and while testing it
 
@@ -145,7 +161,7 @@ For local deployment you must have an IDE, like [Visual Studio Code](https://cod
 * After creating your own folder and are in it, type this in to the terminal `git clone https://github.com/LivHed/coworking-spaces.git`
 * Then run this command `pip install --upgrade pip`
 * To be followed by this command `pip install -r requirements.txt` to install the required modules. 
-* You can run the app with the command `python -m flask run`
+* You can run the app with the command `python3 app.py`
 
 ### Heroku Deployment
 This website is deployed on Heroku, following these steps:
