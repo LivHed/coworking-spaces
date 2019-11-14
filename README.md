@@ -34,8 +34,8 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The select menu with the cities and the search button is placed underneath the name of the page and the sentence with what you can do on this landing page, as a natural next step of action to follow.
 * 
 * The Coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. 
-* The fields in the forms are required, so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
-* The name of the webpage is placed in the navbar in the left corner.
+* The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
+* The name of the webpage is placed in the navbar in the left corner as good common pratcice. The navbar collapse to a burger icon on smaller devices.
 
 #### Features Left to Implement
 * In the future I want to add authentication with Sign up / Log in forms, so that the edit/add/delete functionality for the information of the coworking spaces is only for logged in members.
@@ -43,7 +43,6 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * If I have had more time in the project I would have focused on and worked more with the UI.
 * If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
 * In the future I would want for users to add cities, at the moment only I can add cities from the database. 
-* 
 
 ## Technologies Used
 #### Languages
@@ -180,7 +179,8 @@ SECRET_KEY: <your_secret_key>
 * The content that are showing in the results are gathered from the coworking spaces own web pages, and I´m making sure me and other people are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and people that are using their spaces.
 
 ## Media
-* 
+* I´m using this image as the default image to show in the cards when the user´s not adding an image url to the forms, from pexels.com, [see it here](https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg)
+
 
 ## Acknowledgements
 * For the results showing of the coworking spaces I copied the Album example code from this page https://getbootstrap.com/docs/4.0/examples/album/ and then modified the layout for my needs.
