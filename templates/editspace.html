@@ -4,10 +4,15 @@
 <!-- Select menu where you can choose a city -->
 
 <div class "row">
+    <div class="col-12">
     <h3 class="text-center">Edit Coworking space</h3>
-    <form action="{{ url_for('update_coworkingspace', coworkingspace_id=coworkingspace._id) }}" method="POST" class="col-12">
-        <div class="row">
-            <div class="form-group col-12">
+    </div>
+    
+    <div class="row justify-content-center">
+                <div class="col-12">
+    
+    <form action="{{ url_for('update_coworkingspace', coworkingspace_id=coworkingspace._id) }}" method="POST">
+            <div class="form-group">
                 <label for="city"><strong>City</strong></label>
                 <select class="form-control" id="city" name="city_name" required>
       <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
@@ -21,55 +26,50 @@
     </select>
             </div>
         </div>
+        </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="coworking_name"><strong>The name of the Coworking space</strong></label>
                 <input type="text" class="form-control" id="coworking_name" name="coworking_name" value="{{coworkingspace.coworking_name}}" required>
             </div>
         </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="coworking_description"><strong>Description of the Coworking space</strong></label>
                 <textarea type="text" class="form-control" id="coworking_description" name="coworking_description" required>{{coworkingspace.coworking_description}}</textarea>
             </div>
-        </div>
+        
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="coworking_address"><strong>Address</strong></label>
                 <input type="text" class="form-control" id="coworking_address" name="coworking_address" value="{{coworkingspace.coworking_address}}" required>
             </div>
-        </div>
+        
 
-        <div class="row">
-            <div class="md-form col-12">
+            <div class="md-form">
                 <label for="opening_hours"><strong>Opening hours</strong></label>
                 <h6>Use this format: Mon-Fri 7:00 am - 6:00 pm</h6>
                 <p id="opening_hours">
                     <input placeholder="Opening time" type="text" class="form-control time start" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}" required>
                 </p>
             </div>
-        </div>
+       
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="website_url"><strong>A link to the homepage</strong></label>
                 <input type="text" class="form-control" id="website_url" name="website_url" value="{{coworkingspace.website_url}}" required>
             </div>
-        </div>
         
-         <div class="row">
-            <div class="form-group col-12">
+
+            <div class="form-group">
                 <label for="image_url"><strong>An image of the coworking space</strong></label>
                 <h6>Be sure to use an image from the coworking space's website, rightclick on the image, choose Copy image address and paste it in here.</h6>
                 <input type="text" class="form-control" id="image_url" name="image_url" value="{{coworkingspace.image_url}}">
             </div>
-            </div>
+        
 
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
                 <button class="btn btn-m btn-outline-secondary" type="submit" name="action">Update</button>
             </div>
         </div>
@@ -78,41 +78,41 @@
 </div>
 
 
-<div class="row">
-    <div class="col-12">
-     <p id="deleteparagraph"><strong>Or delete this coworkingspace here:</strong></p>
-     
-<!-- Button that triggers the modal -->
-<button type="button" class="btn btn-m btn-outline-danger" id="deletebutton" data-toggle="modal" data-target="#deletecoworkingspace">
+<div class="row text-center">
+    <div class="col-md-12">
+        <p id="deleteparagraph" class="text-center"><strong>..Or delete this coworkingspace here:</strong></p>
+
+        <!-- Button that triggers the modal -->
+        <button type="button" class="btn btn-m btn-outline-danger justify-content-center" id="deletebutton" data-toggle="modal" data-target="#deletecoworkingspace">
   Delete coworkingspace
 </button>
-</div>
+    </div>
 </div>
 
 <!-- The modal -->
 <div class="row">
-<div class="col-12">
-<div class="modal fade" id="deletecoworkingspace" tabindex="-1" role="dialog" aria-labelledby="deleteCoworkingLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteCoworkingLabel"><strong>Are you sure you want to delete this coworkingspace?</strong></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="col-md-12">
+        <div class="modal fade" id="deletecoworkingspace" tabindex="-1" role="dialog" aria-labelledby="deleteCoworkingLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteCoworkingLabel"><strong>Are you sure you want to delete this coworkingspace?</strong></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-            </div>
-            <div class="modal-body">
-                This will delete the coworkingspace permanently from the list. 
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No, go back</button>
-                <a href="{{url_for('delete_coworkingspace', coworkingspace_id=coworkingspace._id) }}" type="button" class="btn btn-danger">Yes, I´m sure</a>
+                    </div>
+                    <div class="modal-body">
+                        This will delete the coworkingspace permanently from the list.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No, go back</button>
+                        <a href="{{url_for('delete_coworkingspace', coworkingspace_id=coworkingspace._id) }}" type="button" class="btn btn-danger">Yes, I´m sure</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-</div>
+    </div>
 </div>
 
 
