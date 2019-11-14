@@ -32,7 +32,6 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 #### Existing Features
 * The presentation text is placed under the name of the page and provides 
 * The select menu with the cities and the search button is placed underneath the name of the page and the sentence with what you can do on this landing page, as a natural next step of action to follow.
-* 
 * The Coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. 
 * The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
 * The name of the webpage is placed in the navbar in the left corner as good common pratcice. The navbar collapse to a burger icon on smaller devices.
@@ -43,6 +42,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * If I have had more time in the project I would have focused on and worked more with the UI.
 * If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
 * In the future I would want for users to add cities, at the moment only I can add cities from the database. 
+* I also want to add pagination to show only 3 or 6 cards per page. 
 
 ## Technologies Used
 #### Languages
@@ -95,11 +95,6 @@ Here I present how my website meet the needs of the users that will visit the si
 * As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down. -->
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.-->
 
-(remove these, look at for insp)
-* As an environmentally conscious traveller I want to have a look at cities with a sustainable focus before I travel there, to get inspired and remember to keep the focus of those things I find most important in the society. --> The information about the list of the sustainable cities and how to find them in the map are easily seen in the introduction right underneath the heading, and are therefore easy to understand how to find by choosing a city in the dropdown menu, and to see on the map with icons and listed in the result list below it. It´s also possible to read more about this list on the company's website that is linked to in the text.
-* As an environmentally conscious traveller on the road right now I would like to know where to eat and stay for the night while exploring the sustainable city I´m currently in. --> This information can easily be found on a smartphone on the go, since the webpage has a mobile-first design with a simple and easy understandable layout.
-* As a traveller with many different kinds of interests I would like to check this page out, out of pure curiosity, to see what kinds of cities the environmentally conscious travellers would want to visit, and maybe travel there myself to see what these cities are like. --> This research can be done from home or on the go, beforehand or during the stay in the city, like described above.
-
 ### Validation of code
 - I used [this website](https://validator.w3.org/#validate_by_input) to validate my HTML by direct input.
 - I used [this website](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) to validate my CSS by direct input.
@@ -110,11 +105,10 @@ Here I present how my website meet the needs of the users that will visit the si
 
 ### The responsive parts of the website
 
-- The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. The dropdown menu, the radio buttons and the map is placed inside of responsive columns and the resultlist is placed inside of a responsive table.
-- The title of the page is inside of a navbar, which is responsive by default.
-- The More results button responds to get more results when it´s clicked, until the limit is reached.
-- The resultlist is cleared when a new city is chosen, and when clicking the other radio button.
-- The Google maps Javascript API and Places library is responsive in itself and is set to respond to the interactions of the user.
+- The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
+- The title of the page inside of the navbar in the top left corner takes the user back to the landing page when it´s clicked on. 
+- 
+-
 
 ### Testing process scenarios
 
@@ -131,7 +125,8 @@ Edit a coworking space
 2. Click on the restaurants radio button for every selected city and verify that the results of restaurants are showing on the map with the proper marker icons.
 
 Delete a coworking space
-
+1. 
+2. 
 
 Add a coworking space
 1. 
