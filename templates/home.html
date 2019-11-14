@@ -35,7 +35,11 @@ modified the layout for my needs-->
       {% if coworkingspaces is defined and coworkingspaces|length > 0 %} {% for coworkingspace in coworkingspaces %}
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <img class="card-img-top" data-src="{{coworkingspace.image_url}}" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
+          {% if coworkingspace.image_url %}
+           <img class="card-img-top" data-src="{{coworkingspace.image_url}}" alt="" style="height: 225px; width: 100%; display: block;" src="{{coworkingspace.image_url}}" data-holder-rendered="true">
+          {% else %}
+           <img class="card-img-top" data-src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="" style="height: 225px; width: 100%; display: block;" src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" data-holder-rendered="true">
+          {% endif %}
           <div class="card-body">
             <h5 class="card-title">{{coworkingspace.coworking_name}}</h5>
             <p class="card-text">{{coworkingspace.coworking_description}}</p>
