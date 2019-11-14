@@ -25,7 +25,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down.
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.
 
-### Features
+## Features
 #### Existing Features
 * The presentation text is placed under the name of the page and provides 
 * The select menu with the cities in it is placed underneath the introduction text as a natural next call to action to follow.
@@ -35,16 +35,16 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The name of the webpage is placed in the navbar in the left corner.
 
 #### Features Left to Implement
-* In the future I want to add authenication with Sign up / Log in forms, so that not anyone can edit information about the coworking spaces.
-* I want to add ..
+* In the future I want to add authentication with Sign up / Log in forms, so that the edit/add/delete functionality for the information of the coworking spaces is only for logged in members.
+* I want to add a timepicker to the Add and Edit forms to choose opening and closing times for the coworking spaces, from dropdowns. This for a more simple and user-friendly way to add this than what I currently have.
 * If I have had more time in the project I would have focused on and worked more with the UI.
 * If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
-* 
+*
 * 
 
 ## Technologies Used
 #### Languages
-* [HTML5](https://www.w3schools.com/html/html5_intro.asp), [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
+* [HTML](https://www.w3schools.com/html/html5_intro.asp), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
 * [Python](https://www.python.org/download/releases/3.0/)
 
 #### Libraries
@@ -63,6 +63,27 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [MongoDB Atlas](https://www.mongodb.com/cloud) is the database I have used for this project.
 * [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
 * [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page.
+
+## Information Architecture
+* In the database MongoDB I created two collections:
+```
+cities
+coworkingspaces
+```
+An example of the structure and the key-value pairs from the cities collection:
+```
+city_name: "Stockholm"  
+```
+An example of the structure and the key-value pairs from the coworkingspaces collection:
+```
+city_name: "Stockholm"
+coworking_name: "Impact Hub Stockholm"
+coworking_description: "Impact Hub is the world’s largest network of social entrepreneurs, and..."
+coworking_address: "Luntmakargatan 25, 111 37 Stockholm"
+opening_hours: "Mon-Fri 9:00 am - 5:00 pm"
+website_url: "https://stockholm.impacthub.net/"
+image_url: "https://coworker.imgix.net/photos/sweden/stockholm/impact-hub-stockhol..."
+``` 
 
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
