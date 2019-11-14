@@ -1,13 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
 <!-- The form where you can edit or delete a record from the database -->
-<!-- Select menu where you can choose a city -->
 
 <div class "row">
     <div class="col-12">
     <h3 class="text-center">Edit Coworking space</h3>
     </div>
-    
+   
+  <!-- Select menu where you can choose a city -->  
+  
     <div class="row justify-content-center">
                 <div class="col-12">
     
@@ -27,6 +28,9 @@
             </div>
         </div>
         </div>
+
+ <!-- The fields of the form. They are pre-filled and all of them are required,
+    except for the image input where a default image will be added if there is no imagelink inserted there-->
 
             <div class="form-group">
                 <label for="coworking_name"><strong>The name of the Coworking space</strong></label>
@@ -77,6 +81,9 @@
     </form>
 </div>
 
+
+<!-- This area contains the modal that is triggered by a button. When you click the Delete button you can choose from two options which will either take you back to the 
+Edit page or delete the coworking space-->
 
 <div class="row text-center">
     <div class="col-md-12">
