@@ -4,15 +4,21 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from bson.json_util import dumps, loads
 
+
+
 # creates an instance of flask and assign it to the app variable
 app = Flask(__name__)
+
 
 # ---------Environment variables-----------------------------------
 app.config["MONGO_DBNAME"] = 'coworkingSpacesDB'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 app.config["SECRET_KEY"] = os.getenv('SECRET_KEY')
 
+
 mongo = PyMongo(app)
+
+
 
 # -----Home page. this will be the default function that will be called when the application is run-----
 @app.route('/')
@@ -40,10 +46,12 @@ def about():
     return render_template("about.html")
   
   
+  
 # ---------------Add coworking spaces page-----------------------
 @app.route('/add_coworkingspace')
 def add_coworkingspace():
     return render_template('addspace.html', cities=mongo.db.cities.find())
+
 
     
 @app.route('/insert_coworkingspace', methods=['GET', 'POST'])
@@ -62,6 +70,7 @@ def insert_coworkingspace():
     coworkingspaces = mongo.db.coworkingspaces
     coworkingspaces.insert_one(coworkingspace)
     return redirect(url_for('get_coworkingspaces'))
+  
     
 
 # ----------Edit, update and delete coworking space page----------------
@@ -94,6 +103,7 @@ def update_coworkingspace(coworkingspace_id):
 def delete_coworkingspace(coworkingspace_id):
     mongo.db.coworkingspaces.remove({'_id': ObjectId(coworkingspace_id)})
     return redirect(url_for('get_coworkingspaces'))
+
 
 
 #--------------------------------Contact page----------------------------
