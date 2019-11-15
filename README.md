@@ -91,25 +91,22 @@ image_url: "https://coworker.imgix.net/photos/sweden/stockholm/impact-hub-stockh
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
 
-* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. --> This is possible to do from the landing page, where it´s clear what to do. The first thing you see is the text that tells you that you can find a coworking space on this page, clearly with using the select menu of cities and a search button.
-* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. --> THis need can be met as in the example above, with the search function for the cities that are presented in the dropdown menu. 
-* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down. -->
-* As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.-->
+* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. --> This is possible to do from the landing page, where it´s clear what you can do. The first thing you see is the text that tells you that you can find a coworking space on this page, by using the select menu of cities and a search button. After the search you can scroll through the results and also view them on their own homepage if you want.
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues wants to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. --> This need can be met as in the example above, with the search function for the cities that are presented in the dropdown menuand by looking through the results. 
+* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if one have become inactive or shut down. --> You are able to do this in the page Add a coworking space, or Edit coworking space, and also delete a space if you know it´s inactive. This is great pages to share your knowledge, also through the contact form if you notice something you want to give a heads up for or ask about.
+* As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.--> This page is great as inspiration for this, since it´s possible to find coworking spaces in chosen cities, see short information about them and read further in their own homepages if needed.
 
 ### Validation of code
 - I used [this website](https://validator.w3.org/#validate_by_input) to validate my HTML by direct input.
 - I used [this website](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_input) to validate my CSS by direct input.
-- I used JS Hint to check my Javascript code for errors and potential problems.
 
-### The responsiveness of the whole website
-- The webpage is fully responsive for these devices: Galaxy S5, Pixel 2, Pixel 2XL, IPhone 5 SE, Iphone 6/7/8, IPhone 6/7/8 Plus, Iphone X, tested in Chrome Developer Tools and Responsinator.
+### The responsiveness of the website
+I used Responsinator to check the responsiveness of the page.
 
-### The responsive parts of the website
 
 - The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
 - The title of the page inside of the navbar in the top left corner takes the user back to the landing page when it´s clicked on. 
-- 
--
+
 
 ### Testing process scenarios
 
@@ -149,10 +146,12 @@ Contact form
 3. Click on the Submit button and verify that the form is not submitted, you are still on the page. (This is because this project did not require authentication, and is therefore something I´ll add later when there is time.)
 
 ### Bugs I came across while creating the site and while testing it
-
-* When clicking on..  the results are not shown..
+* In the pages Responsinator and AmIResponsive the web application showed fully responsiveness to the screen sizes and I used them to start with. Although I noticed way too late that when I´m trying the wep app on my smartphone (IPhone 6) the forms are displaying very small, as on a computer screen. This is something I unfortunately did not have more time to fix; the responsiveness with the right column widths to have a fully responsive page. 
+* Used loads and dumps in the terminal to debug and change the way to render the coworkingspaces in the `/get_coworkingspaces` and `/show_results` routes, like this: `coworkingspaces=loads(dumps(coworkingspaces))`
+* I mainly used DevTools in Chrome to debug, and of course the terminal to see the history when running `python3 app.py`
 * 
-* 
+#### A small example of one of the debugging processes
+* The Update function was not working at first with the image url request. I first tried to create a way in the app.py code to make the default image to show when an image link was not added to that input field in the form. I created a new variable in the update route with the request to the form with an if statement, and passed the variable in to the `coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)}` iteration. After all kinds of errors and attempts to fix this, at last I created an if statement around the image tag to make this function work, as I have learned now, is something I would have done from the beginning.
 
 ## Deployment
 
@@ -185,13 +184,13 @@ SECRET_KEY: <your_secret_key>
 
 ## Credits
 
-## Content
-* The content on the website was written by me, after doing research in other coworking space pages and after reading about the concept.
-* The content that are showing in the results are gathered from the coworking spaces own web pages, and I´m making sure me and other people are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and people that are using their spaces.
+### Content
+* The content on the website was written by me, after doing research with searching for and looking at other coworking space pages and after reading about the concept.
+* The content that are showing in the cards are gathered from information written on the coworking spaces own web pages, and I´m making sure me and other people are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and hopefully more people that will use their coworking spaces.
 
-## Media
+### Media
 * I´m using this image as the default image to show in the cards when the user´s not adding an image url to the forms, from pexels.com, [see it here](https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg)
+* I have inserted images for the coworking spaces I have added that are from their own webpages. I want to give thanks and credit to these homepages that are providing this great content to the world and the community and have these great images to show, that I use for my page. I you want to find a specific image click on the link to the homepage of the coworking space and you will find it. 
 
-
-## Acknowledgements
-* For the results showing of the coworking spaces I copied the Album example code from this page https://getbootstrap.com/docs/4.0/examples/album/ and then modified the layout for my needs.
+### Acknowledgements
+* For the results showing of the coworking spaces I copied the Album example code from [this page](https://getbootstrap.com/docs/4.0/examples/album/) and then modified the layout for my needs.
