@@ -29,20 +29,21 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 
 ## Features
 #### Existing Features
-* The presentation text is placed under the name of the page and provides 
-* The select menu with the cities and the search button is placed underneath the name of the page and the sentence with what you can do on this landing page, as a natural next step of action to follow.
-* The Coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. 
-* The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all fields are filled in. This will show nicely in the cards, with all fields complete inside of them. 
+* The navbar contains the name of the web application and the three pages you can click on to visit. The pages are named clearly.
+* The select menu with the cities and the search button is placed underneath the name of the page and the sentence that tells you what you can do on this landing page, as a natural next step of action to follow.
+* The coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. The cards also have an Edit button for the users to click on to be able to edit the information about the space.
+* The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all of these fields are filled in. This will show nicely in the cards, with all rows complete inside of them.
 * The name of the webpage is placed in the navbar in the left corner as good common pratcice. The navbar collapse to a burger icon on smaller devices.
+* If a user clicks on the Delete button in the Edit page a modal will show, the background will fade and two options will appear in two buttons in the modal, one to take you back to the page and one to delete the coworking space.
 
 #### Features Left to Implement
-* In the future I want to add authentication with Sign up / Log in forms, so that the edit/add/delete functionality for the information of the coworking spaces is only for logged in members.
-* I want to add a timepicker to the Add and Edit forms to choose opening and closing times for the coworking spaces, from dropdowns. This for a more simple and user-friendly way to add this than what I currently have.
-* If I have had more time in the project I would have focused on and worked more with the UI.
-* If I have had more time I would also have wanted to aded a footer sticked to the bottom of the page.
-* In the future I would want for users to add cities, at the moment only I can add cities from the database. 
-* I also want to add pagination to show only 3 or 6 cards per page. 
-* Since this project did not require authentication, nothing happends when you click on the Send button in the Contact form, this is something I´ll fix later when there is time.
+* In the future I want to add authentication with Sign up / Log in forms, so that the edit/add/delete functionality for the information of the coworking spaces is only for logged in members to perform.
+* If I have had more time with the project I would have added a timepicker to the Add and Edit forms to choose opening and closing times for the coworking spaces, from dropdowns. This for a more simple and user-friendly way to add this than what I currently have.
+* If I have had more time I would also have wanted to add a footer sticked to the bottom of the page.
+* In the future I would want for users to add cities, at the moment only I can add cities from the database.
+* I also want to add pagination to show only 3 or 6 cards per page to present the results more nicely, and specially when the database will grow. 
+* Since this project did not require authentication, nothing happends when you click on the Send button in the Contact form, this is something I´ll fix later when there is time. Although the input fields are set to required to fill in.
+* I want to add icons to the contact form and possibly to the Add and Edit form as well. 
 
 ## Technologies Used
 #### Languages
@@ -64,7 +65,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * [GitHub](https://github.com/) to store and share the project remotely.
 * [MongoDB Atlas](https://www.mongodb.com/cloud) is the database I have used for this project.
 * [Balsamiq](https://balsamiq.com/) to create my wireframes as a part of the design process, with a simple yet goodlooking result.
-* [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page.
+* [Responsinator](http://www.responsinator.com/) was used to check the responsiveness of the page, and also [Responsivedesign](http://ami.responsivedesign.is/) for this.
 
 ## Information Architecture
 * In the database MongoDB I created two collections:
