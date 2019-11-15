@@ -46,6 +46,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * I also want to add pagination to show only 3 or 6 cards per page to present the results more nicely, and specially when the database will grow. 
 * Since this project did not require authentication, nothing happends when you click on the Send button in the Contact form, this is something I´ll fix later when there is time. Although the input fields are set to required to fill in.
 * I want to add icons to the contact form and possibly to the Add and Edit form as well. 
+* Implement some kind of requirement for a certain kind of input, like the address has to be typed in as an address and nothing else to be allowed to submit. This is also the opening hours at the moment (which also can be plain text at the moment). 
 
 ## Technologies Used
 #### Languages
@@ -149,7 +150,9 @@ Contact form
 * In the pages Responsinator and AmIResponsive the web application showed fully responsiveness to the screen sizes and I used them to start with. Although I noticed way too late that when I´m trying the wep app on my smartphone (IPhone 6) the forms are displaying very small, as on a computer screen. This is something I unfortunately did not have more time to fix; the responsiveness with the right column widths to have a fully responsive page. 
 * Used loads and dumps in the terminal to debug and change the way to render the coworkingspaces in the `/get_coworkingspaces` and `/show_results` routes, like this: `coworkingspaces=loads(dumps(coworkingspaces))`
 * I mainly used DevTools in Chrome to debug, and of course the terminal to see the history when running `python3 app.py`
-* 
+* At the moment there is possible to fill in the Adress field in the forms for example with Opening hours and the other way around, there is no function that requires the fields to take a certain input, like an address format in the address field. 
+* I recognize that it´s not neccesarily easy for the user to search for the correct image url, although I´m happy that I inserted a default image to display when the field is empty.
+
 #### A small example of one of the debugging processes
 * The Update function was not working at first with the image url request. I first tried to create a way in the app.py code to make the default image to show when an image link was not added to that input field in the form. I created a new variable in the update route with the request to the form with an if statement, and passed the variable in to the `coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)}` iteration. After all kinds of errors and attempts to fix this, at last I created an if statement around the image tag to make this function work, as I have learned now, is something I would have done from the beginning.
 
