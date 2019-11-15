@@ -6,26 +6,25 @@ The idea of this web page is that the database will grow over time, when users a
 In this app I have used the programming language Python along with the Python micro web framework Flask, and the document-based database MongoDB.
 [Check it out here!](https://coworking-swede.herokuapp.com/)
 
-
 ## UX
 
 ### Design process
-After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. The intention of the pages I found where to search for these spaces globally. I wanted to narrow this search down to only swedish spaces for myself and my fellow swedish coworkers. My goals with the design was set to:
+After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. In the pages I found you could search for these kind of spaces globally. I wanted to narrow this search down to spaces placed in swedish cities, for myself and my fellow swedish coworkers. My goals with the design was set to:
 
-* To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and with buttons showing clear directions.
-* To make a webpage with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
+* To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and buttons with clear directions.
+* To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
 * The fonts that I chose to use for this website are Railway (sans serif) because it presents the content in a stylistic and easy-to-read way.
 * I chose to use 10 of the biggest cities in Sweden to choose from in the search of coworking spaces, since there will be coworking spaces in these cities to choose from for the user to add.
 
 Since this page is supposed to handle the CRUD functionality (Create, Read, Update and Delete) I planned for this web page to give a sense of "Let´s do it together", and I´m specifying the guidelines in the About page. 
 
 ### Wireframes
-The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. One is designed for desktop view and the other for mobile view. Check them out here! (link to it here!)
+The wireframes are created with Balsamiq. They where made as a part of the design process and are saved as a pdf document and kept in the separate folder; wireframes. All of the pages are showed as I planned them and one example of mobile view can be found on the last page in the document. [Check them out here!](https://github.com/LivHed/coworking-spaces/blob/master/wireframes/BalsamiqMockupMilestone3finnish.pdf)
 
 ### User stories
 * As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them.
-* As an entrepreneur working with a small startup without an office space yet, me and my colleagues want to find a coworking space to work from when needed for meetings or as a temporary office space shared with others.
-* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if a place have become inactive or shut down.
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues wants to find a coworking space to work from when needed for meetings or as a temporary office space shared with others.
+* As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these spaces or if one have become inactive or shut down.
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.
 
 ## Features
