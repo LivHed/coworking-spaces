@@ -11,12 +11,12 @@ In this app I have used the programming language Python along with the Python mi
 ## UX
 
 ### Design process
-After doing research looking at websites with coworking spaces I found that there was no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. In the pages I found you could search for these kind of spaces globally. I wanted to narrow this search down to spaces placed in swedish cities, for myself and my fellow swedish coworkers. My goals with the design was set to:
+After doing research looking at websites with coworking spaces I found that there where no pages dedicated only to Swedish coworking spaces, which is a gap I wanted to fill. In the pages I found you could search for these kinds of spaces globally. I wanted to narrow this search down to spaces placed in swedish cities, for myself and my fellow swedish coworkers. My goals with the design was set to:
 
 * To make the design suitable for people who wants to find coworking spaces in an easy way. I wanted to do this with a stylistic and easily understandable design with light and discrete colors and buttons with clear directions.
 * To make a web application with several pages, each with it´s clear purpose, and this with a user friendly and easy layout to quick be able to understand what you can do and how.
 * The fonts that I chose to use for this website are Railway (sans serif) because it presents the content in a stylistic and easy-to-read way.
-* I chose to use 10 of the biggest cities in Sweden to choose from in the search of coworking spaces, since there will be coworking spaces in these cities to choose from for the user to add.
+* I chose to use 10 of the biggest cities in Sweden to choose from in the search of coworking spaces, since there will be coworking spaces in these cities to choose from and for the user to add to the database.
 
 Since this page is supposed to handle the CRUD functionality (Create, Read, Update and Delete) I planned for this web page to give a sense of "Let´s do it together", and I´m specifying the guidelines in the About page. 
 
@@ -35,7 +35,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * The select menu with the cities and the search button is placed underneath the name of the page and the sentence that tells you what you can do on this landing page, as a natural next step of action to follow.
 * The coworking spaces and the details about them are shown in album cards, in a responsive way. The user can click on the link to view the coworking space´s own webpage. The cards also have an Edit button for the users to click on to be able to edit the information about the space.
 * The fields in the forms are required (except for the insert image field), so the user won´t be able to submit the forms until all of these fields are filled in. This will show nicely in the cards, with all rows complete inside of them.
-* The name of the webpage is placed in the navbar in the left corner as good common pratcice. The navbar collapse to a burger icon on smaller devices.
+* The name of the webpage is placed in the navbar in the left corner as good common pratcice, and are clickable and leads to the landing page. The navbar collapse to a burger icon on smaller devices.
 * If a user clicks on the Delete button in the Edit page a modal will show, the background will fade and two options will appear in two buttons in the modal, one to take you back to the page and one to delete the coworking space.
 
 #### Features Left to Implement
@@ -46,7 +46,7 @@ The wireframes are created with Balsamiq. They where made as a part of the desig
 * I also want to add pagination to show only 3 or 6 cards per page to present the results more nicely, and specially when the database will grow. 
 * Since this project did not require authentication, nothing happends when you click on the Send button in the Contact form, this is something I´ll fix later when there is time. Although the input fields are set to required to fill in.
 * I want to add icons to the contact form and possibly to the Add and Edit form as well. 
-* Implement some kind of requirement for a certain kind of input, like the address has to be typed in as an address and nothing else to be allowed to submit. This is also the opening hours at the moment (which also can be plain text at the moment). 
+* Implement some kind of requirement for a certain kind of input, like the address has to be typed in as an address and nothing else to be allowed to submit. This is also in the opening hours field at the moment (which also can be plain text at the moment). 
 
 ## Technologies Used
 #### Languages
@@ -94,8 +94,8 @@ image_url: "https://coworker.imgix.net/photos/sweden/stockholm/impact-hub-stockh
 ## Testing
 Here I present how my website meet the needs of the users that will visit the site, which I presented in the section UX: User stories:
 
-* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. --> This is possible to do from the landing page, where it´s clear what you can do. The first thing you see is the text that tells you that you can find a coworking space on this page, by using the select menu of cities and a search button. After the search you can scroll through the results and also view them on their own homepage if you want.
-* As an entrepreneur working with a small startup without an office space yet, me and my colleagues wants to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. --> This need can be met as in the example above, with the search function for the cities that are presented in the dropdown menuand by looking through the results. 
+* As an employee at a company, that works remotely from home, I would like to change my workspace from time to time. I want to be able to search for coworking spaces in the city where I live and to be able to edit and add information about them when I have tried them. --> This is possible to do from the landing page, where it´s clear what you can do. The first thing you see is the text that tells you that you can find a coworking space on this page, by using the select menu of cities and a search button. After the search you can scroll through the results and also view them on their own homepage if you want. You can also add a new coworking space you have visited in the tab Add new coworking space.
+* As an entrepreneur working with a small startup without an office space yet, me and my colleagues wants to find a coworking space to work from when needed for meetings or as a temporary office space shared with others. --> This need can be met as in the example above, with the search function for the cities that are presented in the dropdown menu and by looking through the results. 
 * As a self-employed and freelancer working remotely I´m interested in the coworking scene in Sweden as I travel a lot to meet with clients and work from wherever I´m positioned at the moment. I have a lot of contacts and insight in this area and I want to be able to add workspaces on this webpage to share my knowledge with others, and also edit and/or delete information if updates I´m aware of have been made for these places or if one have become inactive or shut down. --> You are able to do this in the page Add a coworking space, or Edit coworking space, and also delete a space if you know it´s inactive. This is great pages to share your knowledge, also through the contact form if you notice something you want to give a heads up for or ask about.
 * As an employee I have asked for permission from my boss to work remotely for a week to try it out, to see if it could be a new way of working that suits both me and the company. I want to search for a coworking space in a city in another part of Sweden to spend this week there.--> This page is great as inspiration for this, since it´s possible to find coworking spaces in chosen cities, see short information about them and read further in their own homepages if needed.
 
@@ -107,7 +107,7 @@ Here I present how my website meet the needs of the users that will visit the si
 I used Responsinator to check the responsiveness of the page.
 
 - The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
-- The title of the page inside of the navbar in the top left corner takes the user back to the landing page when it´s clicked on. 
+- The title of the page inside of the navbar in the top left corner works in a responsive way with the navbar and takes the user back to the landing page when it´s clicked on. 
 
 ### Testing process scenarios
 
@@ -129,7 +129,7 @@ Edit a coworking space
 
 Delete a coworking space
 1. On the Edit page, click on the Delete button
-2. verify that the modal is showing and that you will be given one more chance to be sure that you want to delete this coworking space. 
+2. Verify that the modal is showing and that you will be given one more chance to be sure that you want to delete this coworking space. 
 3. Click on the No, go back button and verify that you are back on the Edit page.
 4. If you choose to click on the Yes, I´m sure button, verify that the coworking space have been deleted when you get redirected to the landing page. 
 
@@ -154,7 +154,7 @@ Contact form
 * I recognize that it´s not neccesarily easy for the user to search for the correct image url, although I´m happy that I inserted a default image to display when the field is empty.
 
 #### A small example of one of the debugging processes
-* The Update function was not working at first with the image url request. I first tried to create a way in the app.py code to make the default image to show when an image link was not added to that input field in the form. I created a new variable in the update route with the request to the form with an if statement, and passed the variable in to the `coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)}` iteration. After all kinds of errors and attempts to fix this, at last I created an if statement around the image tag to make this function work, as I have learned now, is something I would have done from the beginning.
+* The Update function was not working at first with the image url request. I first tried to create a way in the app.py code to make the default image to show when an image link was not added to that input field in the form. I created a new variable in the update route with the request to the form with an if statement, and passed the variable in to the `coworkingspaces.update( {'_id': ObjectId(coworkingspace_id)}` iteration. After all kinds of errors and attempts to fix this, at last I created an if statement around the image tag to make this function work, as I have learned now, is something I would have done from the beginning, and that it was an easier way to approach it.
 
 ## Deployment
 
@@ -182,18 +182,18 @@ PORT: 5000
 MONGO_URI: mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
 SECRET_KEY: <your_secret_key>
 ```
-* You will get the MONGO_URI in your created database on the Mongo Db Atlas page. Keep that string and the secret key as environment variables so only you can access them.
-* Click on the button Open app in the top right corner and you can now view your deployed app.
+* You will be able to get the MONGO_URI in your created database on the Mongo Db Atlas page. Keep that string and the secret key as environment variables so only you can access them.
+* Click on the button Open app in the top right corner in the Heroku page and you can now view your deployed app.
 
 ## Credits
 
 ### Content
 * The content on the website was written by me, after doing research with searching for and looking at other coworking space pages and after reading about the concept.
-* The content that are showing in the cards are gathered from information written on the coworking spaces own web pages, and I´m making sure me and other people are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and hopefully more people that will use their coworking spaces.
+* The content that are showing in the cards are gathered from information written on the coworking spaces own web pages, and I´m making sure me and other users are linking to these coworking spaces own homepages so that people can read further about them and give them more traffic and hopefully more people that will use their coworking spaces.
 
 ### Media
 * I´m using this image as the default image to show in the cards when the user´s not adding an image url to the forms, from pexels.com, [see it here](https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg)
-* I have inserted images for the coworking spaces I have added that are from their own webpages. I want to give thanks and credit to these homepages that are providing this great content to the world and the community and have these great images to show, that I use for my page. I you want to find a specific image click on the link to the homepage of the coworking space and you will find it. 
+* I have inserted images for the coworking spaces I have added that are from their own webpages. If want to give thanks and credit to these homepages that are providing this great content to the world and the community and have these great images to show, that I use for my page. I you want to find a specific image click on the link to the homepage of the coworking space and you will find it. 
 
 ### Acknowledgements
 * For the results showing of the coworking spaces I copied the Album example code from [this page](https://getbootstrap.com/docs/4.0/examples/album/) and then modified the layout for my needs.
