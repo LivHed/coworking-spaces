@@ -6,6 +6,8 @@ The idea of this web page is that the database will grow over time, when users a
 In this app I have used the programming language Python along with the Python micro web framework Flask, and the document-based database MongoDB.
 [Check it out here!](https://coworking-swede.herokuapp.com/)
 
+![Coworking swede img](https://github.com/LivHed/coworking-spaces/blob/master/static/images/milestone3.png "The coworking swede image")
+
 ## UX
 
 ### Design process
@@ -103,10 +105,8 @@ Here I present how my website meet the needs of the users that will visit the si
 ### The responsiveness of the website
 I used Responsinator to check the responsiveness of the page.
 
-
 - The webpage is responsive since I´m using Bootstrap 4 and it works good on smaller devices too. Yhe navbar collapse on smaller views with a standard navbar icon for smaller devices.
 - The title of the page inside of the navbar in the top left corner takes the user back to the landing page when it´s clicked on. 
-
 
 ### Testing process scenarios
 
