@@ -1,81 +1,75 @@
 {% extends 'base.html' %} {% block content %}
 
-<!-- The form where you can add a record to the database -->
+<!-- The heading for the form where you can add a record to the database -->
 
-<div class "row">
-    <h3 class="text-center">Add a new Coworking space</h3>
-    <form action="{{ url_for('insert_coworkingspace') }}" method="POST" class="col-md-12">
-
-        <!-- A select menu where you can choose a city.
+   <div class="row">
+      <div class="col-12">
+         <h3 class="text-center">Add a new Coworking space</h3>
+      </div>
+    </div>
+    
+    <!-- A select menu where you can choose a city.
         A for loop is used to loop trhough the cities to get data from the backend from the cities collection -->
-
-        <div class="row">
-            <div class="form-group col-12">
+    
+<div class="row justify-content-center">
+    <div class="col-12">
+    
+        <form action="{{ url_for('insert_coworkingspace') }}" method="POST">
+            <div class="form-group">
                 <label for="city"><strong>City</strong></label>
                 <select class="form-control" id="city" name="city_name" required>
-                  <option value="" placeholder="Choose a city" disabled selected>Choose a city</option>
+                  <option value="" disabled selected>Choose a city</option>
                  {% for city in cities %}
                     <option value="{{city.city_name}}">{{city.city_name}}</option>
                  {% endfor %}
                 </select>
             </div>
-        </div>
+        
 
         <!-- The fields of the form. They are empty and all of them are required, 
         except for the image input where a default image will be added if there is no imagelink inserted there-->
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="coworking_name"><strong>The name of the Coworking space</strong></label>
                 <input type="text" class="form-control" id="coworking_name" name="coworking_name" required>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="coworking_description"><strong>Description of the Coworking space</strong></label>
-                <textarea type="text" class="form-control" id="coworking_description" name="coworking_description" required></textarea>
+                <textarea class="form-control" id="coworking_description" name="coworking_description" required></textarea>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+        
+            <div class="form-group">
                 <label for="coworking_address"><strong>Address</strong></label>
                 <input type="text" class="form-control" id="coworking_address" name="coworking_address" required>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="md-form col-12">
+            <div class="form-group">
                 <label for="opening_hours"><strong>Opening Hours</strong></label>
                 <h6>Use this format: Mon-Fri 7:00 am - 6:00 pm</h6>
                 <input type="text" class="form-control timepicker" id="opening_hours" name="opening_hours" required>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="website_url"><strong>A link to the homepage</strong></label>
                 <input type="text" class="form-control" id="website_url" name="website_url" required>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group">
                 <label for="image_url"><strong>An image of the coworking space</strong></label>
                 <h6>Be sure to use an image from the coworking space's website, rightclick on the image, choose Copy image address and paste it in here.</h6>
                 <input type="text" class="form-control" id="image_url" name="image_url">
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
+          <div class="row">
+            <div class="col-md-12">
                 <button type="submit" class="btn btn-m btn-outline-secondary">Add</button>
             </div>
-        </div>
+          </div>
 
-    </form>
-</div>
+        </form>
+    </div>
 </div>
 
 
