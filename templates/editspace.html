@@ -40,53 +40,49 @@
     </div>
 
 
-<div class="form-group">
-    <label for="coworking_description"><strong>Description of the Coworking space</strong></label>
-    <textarea type="text" class="form-control" id="coworking_description" name="coworking_description" required>{{coworkingspace.coworking_description}}</textarea>
-</div>
+    <div class="form-group">
+       <label for="coworking_description"><strong>Description of the Coworking space</strong></label>
+       <textarea class="form-control" id="coworking_description" name="coworking_description" required>{{coworkingspace.coworking_description}}</textarea>
+    </div>
 
+    <div class="form-group">
+       <label for="coworking_address"><strong>Address</strong></label>
+       <input type="text" class="form-control" id="coworking_address" name="coworking_address" value="{{coworkingspace.coworking_address}}" required>
+    </div>
 
-<div class="form-group">
-    <label for="coworking_address"><strong>Address</strong></label>
-    <input type="text" class="form-control" id="coworking_address" name="coworking_address" value="{{coworkingspace.coworking_address}}" required>
-</div>
+    <div class="form-group">
+      <label for="opening_hours"><strong>Opening hours</strong></label>
+        <h6>Use this format: Mon-Fri 7:00 am - 6:00 pm</h6>
+          <p>
+            <input placeholder="Opening time" type="text" class="form-control time start" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}" required>
+          </p>
+    </div>
 
+    <div class="form-group">
+       <label for="website_url"><strong>A link to the homepage</strong></label>
+       <input type="text" class="form-control" id="website_url" name="website_url" value="{{coworkingspace.website_url}}" required>
+    </div>
 
-<div class="md-form">
-    <label for="opening_hours"><strong>Opening hours</strong></label>
-    <h6>Use this format: Mon-Fri 7:00 am - 6:00 pm</h6>
-    <p id="opening_hours">
-        <input placeholder="Opening time" type="text" class="form-control time start" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}" required>
-    </p>
-</div>
+    <div class="form-group">
+      <label for="image_url"><strong>An image of the coworking space</strong></label>
+        <h6>Be sure to use an image from the coworking space's website, rightclick on the image, choose Copy image address and paste it in here.</h6>
+          <input type="text" class="form-control" id="image_url" name="image_url" value="{{coworkingspace.image_url}}">
+    </div>
 
-
-<div class="form-group">
-    <label for="website_url"><strong>A link to the homepage</strong></label>
-    <input type="text" class="form-control" id="website_url" name="website_url" value="{{coworkingspace.website_url}}" required>
-</div>
-
-
-<div class="form-group">
-    <label for="image_url"><strong>An image of the coworking space</strong></label>
-    <h6>Be sure to use an image from the coworking space's website, rightclick on the image, choose Copy image address and paste it in here.</h6>
-    <input type="text" class="form-control" id="image_url" name="image_url" value="{{coworkingspace.image_url}}">
-</div>
-
-<div class="row">
-    <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
         <button class="btn btn-m btn-outline-secondary" type="submit" name="action">Update</button>
-    </div>
-</div>
-
-</form>
-</div>
-   </div>
+      </div>
     </div>
 
+    </form>
+  </div>
+</div>
+    
 
-<!-- This area contains the modal that is triggered by a button. When you click the Delete button you can choose from two options which will either take you back to the 
-Edit page or delete the coworking space-->
+
+ <!-- This area contains the modal that is triggered by a button. When you click the Delete button you can choose from two options which will either take you back to the 
+ Edit page or delete the coworking space-->
 
 <div class="row text-center">
     <div class="col-md-12">
