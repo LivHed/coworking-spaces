@@ -1,35 +1,37 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="row">
+<div class="row justify-content-center ml-1 mr-1">
+    <div class="col-12">
     <h3 class="text-center">Contact Us</h3>
+    </div>
+</div>
     
-    <form action="{{ url_for('contact_page') }}" method="GET, POST" class="col-12">
+    <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+    <form action="{{ url_for('contact_page') }}" method="GET, POST">
 
-        <div class="row">
-            <div class="form-group col-12">
+            <div class="form-group mb-1">
                 <label for="emailaddress">Email address</label>
                 <input type="email" class="form-control" id="emailaddress" placeholder="name@example.com" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-12">
+        
+            <div class="form-group mb-1">
                 <label for="yourname">Your Name</label>
                 <input class="form-control" type="text" id="yourname" placeholder="Your name" required>
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group col-12">
+        
+            <div class="form-group mb-1">
                 <label for="yourmessage">Your message</label>
-                <textarea class="form-control" id="yourmessage" rows="3" placeholder="Write your message here.." required></textarea>
+                <textarea class="form-control" id="yourmessage" rows="6" placeholder="Write your message here.." required></textarea>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <button type="submit" class="btn btn-m btn-outline-secondary">Send</button>
+       
+            <div class="col-12 mt-2 mb-2">
+                <button type="submit" class="btn btn-m btn-outline-secondary text-center">Send</button>
             </div>
-        </div>
+        
 
     </form>
-  </div>
+    </div>
+    </div>
 
 {% endblock %}
