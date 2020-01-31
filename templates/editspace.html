@@ -50,23 +50,22 @@
        <input type="text" class="form-control" id="coworking_address" name="coworking_address" value="{{coworkingspace.coworking_address}}" required>
     </div>
 
-    <div class="form-group">
-      <label for="opening_hours"><strong>Opening hours</strong></label>
-        <h6>Use this format: Mon-Fri 7:00 am - 6:00 pm</h6>
+    <div class="form-group mb-4">
+      <label for="opening_hours"><strong>Opening Time in the morning</strong></label> <br>
           <p>
-            <input placeholder="Opening time" type="text" class="form-control time start" id="opening_hours" name="opening_hours" value="{{coworkingspace.opening_hours}}" required>
+             Opens in the morning at: <input type="number" size="6" id="opening_hours" name="opening_hours" min="05" max="10" value="{{coworkingspace.opening_hours}}" required> AM
           </p>
     </div>
 
     <div class="form-group">
        <label for="website_url"><strong>A link to the homepage</strong></label>
-       <input type="text" class="form-control" id="website_url" name="website_url" value="{{coworkingspace.website_url}}" required>
+       <input type="url" class="form-control" id="website_url" name="website_url" value="{{coworkingspace.website_url}}" required>
     </div>
 
     <div class="form-group">
       <label for="image_url"><strong>An image of the coworking space</strong></label>
         <h6>Be sure to use an image from the coworking space's website, rightclick on the image, choose Copy image address and paste it in here.</h6>
-          <input type="text" class="form-control" id="image_url" name="image_url" value="{{coworkingspace.image_url}}">
+          <input type="url" class="form-control" id="image_url" name="image_url" value="{{coworkingspace.image_url}}">
     </div>
 
     <div class="row">
